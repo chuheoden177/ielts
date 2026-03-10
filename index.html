@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>IELTS Master Academy – Luyện thi IELTS chuẩn Quốc tế</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    <link href="style.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --navy: #0a1628;
+            --gold: #c9a84c;
+            --gold-light: #e8c97a;
+            --cream: #faf8f3;
+            --slate: #4a5568;
+            --muted: #8a95a3;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--navy);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* HEADER */
+        .site-header {
+            background: var(--navy);
+            border-bottom: 1px solid rgba(201,168,76,0.3);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-dot {
+            color: var(--gold);
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover { color: var(--gold); }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            padding: 10px 22px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            text-transform: uppercase;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--navy);
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            padding: 10px 22px;
+            border-radius: 4px;
+            border: 2px solid var(--navy);
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+        }
+
+        .btn-outline:hover {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        /* ANNOUNCEMENT BAR */
+        .announcement-bar {
+            background: var(--gold);
+            color: var(--navy);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+
+        .announcement-bar span { opacity: 0.8; }
+        .announcement-bar span strong { opacity: 1; }
+
+        /* HERO */
+        .hero-section {
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -120px;
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(10,22,40,0.07);
+            border: 1px solid rgba(10,22,40,0.15);
+            padding: 5px 14px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+
+        .hero-eyebrow span { color: var(--gold); }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 900;
+            line-height: 1.08;
+            color: var(--navy);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-title em {
+            font-style: normal;
+            color: var(--gold);
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 15px;
+            color: var(--slate);
+            line-height: 1.7;
+            max-width: 440px;
+            margin-top: 16px;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #fff;
+            border: 1px solid rgba(10,22,40,0.12);
+            border-radius: 4px;
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--navy);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+
+        .badge i { color: var(--gold); }
+
+        /* STATS BAR */
+        .stats-bar {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .stat-item { border-right: 1px solid rgba(255,255,255,0.1); }
+        .stat-item:last-child { border-right: none; }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 3px;
+            letter-spacing: 0.03em;
+        }
+
+        /* FEATURES */
+        .section-eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+
+        .feature-card {
+            background: #fff;
+            border: 1px solid rgba(10,22,40,0.08);
+            border-radius: 12px;
+            padding: 28px 24px;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 8px 32px rgba(10,22,40,0.12);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--navy);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .feature-icon i { color: var(--gold); font-size: 16px; }
+
+        /* PHOTO GRID */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 10px;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .photo-grid .tall { grid-row: span 2; }
+
+        /* TESTIMONIAL */
+        .testimonial-card {
+            background: var(--navy);
+            color: #fff;
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .stars { color: var(--gold); letter-spacing: 2px; }
+
+        /* CTA BAND */
+        .cta-band {
+            background: linear-gradient(135deg, var(--navy) 0%, #162040 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 40px,
+                rgba(201,168,76,0.04) 40px,
+                rgba(201,168,76,0.04) 41px
+            );
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: #070e1a;
+            color: rgba(255,255,255,0.5);
+            font-size: 12px;
+        }
+
+        /* CLASSROOM MODAL */
+        #classroom-modal {
+            transition: opacity 0.3s ease;
+        }
+
+        #classroom-modal.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #classroom-modal:not(.hidden) {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .classroom-header {
+            background: #0d1117;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            overflow-x: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #333 #0d1117;
+        }
+
+        .participant-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            padding: 4px 10px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .participant-chip img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .participant-chip span {
+            color: rgba(255,255,255,0.8);
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .toolbar-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            color: rgba(255,255,255,0.75);
+            font-size: 10px;
+            cursor: pointer;
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: none;
+            background: none;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .toolbar-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+
+        .toolbar-btn i { font-size: 16px; }
+
+        .leave-btn {
+            background: #dc2626;
+            color: #fff;
+            border: none;
+            padding: 7px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .leave-btn:hover { background: #b91c1c; }
+
+        /* CHAT */
+        #chat-panel {
+            background: #161b22;
+            border-left: 1px solid rgba(255,255,255,0.08);
+        }
+
+        #chat-messages .user-message {
+            background: #1d4ed8;
+            padding: 6px 10px;
+            border-radius: 10px 10px 2px 10px;
+            margin-left: 20px;
+            display: inline-block;
+            font-size: 12px;
+        }
+
+        #chat-messages .other-message {
+            background: #2d3748;
+            padding: 6px 10px;
+            border-radius: 10px 10px 10px 2px;
+            margin-right: 20px;
+            display: inline-block;
+            font-size: 12px;
+        }
+
+        /* TEST MODAL */
+        #test-modal {
+            transition: opacity 0.3s ease;
+        }
+
+        #test-modal.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #test-modal:not(.hidden) {
+            opacity: 1;
+        }
+
+        .test-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 14px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: border-color 0.15s, background 0.15s;
+            font-size: 13px;
+        }
+
+        .test-option:has(input:checked) {
+            border-color: var(--navy);
+            background: rgba(10,22,40,0.04);
+        }
+
+        .test-option input { margin-top: 2px; accent-color: var(--navy); }
+
+        .scrollbar-thin {
+            scrollbar-width: thin;
+            scrollbar-color: #444 #1c1c1c;
+        }
+
+        @media (max-width: 640px) {
+            .hero-title { font-size: 2rem; }
+            .stat-number { font-size: 1.3rem; }
+        }
+
+        .MathJax_Display {
+            font-size: 0.9em !important;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
+        <span><strong>🎁 Giới thiệu bạn mới</strong> – Nhận quà tới 100 triệu</span>
+        <span class="hidden sm:block text-navy opacity-40">|</span>
+        <span><strong>🎓 Tặng khoá phát âm</strong> tiếng Anh Quốc tế miễn phí</span>
+        <span class="hidden sm:block text-navy opacity-40">|</span>
+        <span><strong>📝 Thi thử IELTS</strong> miễn phí – Chuẩn Cambridge</span>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-gold rounded-md flex items-center justify-center" style="background:var(--gold)">
+                <i class="fas fa-graduation-cap text-white text-base"></i>
+            </div>
+            <div>
+                <div class="logo-text text-lg leading-none">IELTS<span class="logo-dot">.</span>Master</div>
+                <div style="font-size:10px; color:rgba(255,255,255,0.4); letter-spacing:0.08em; text-transform:uppercase; margin-top:1px">Academy</div>
+            </div>
+        </div>
+
+        <nav class="nav-links hidden md:flex items-center gap-6">
+            <a href="#">Khoá học</a>
+            <a href="#">Giáo viên</a>
+            <a href="#">Lịch học</a>
+            <a href="#">Tài liệu</a>
+            <a href="#">Blog</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+            <button id="test-ielts" class="btn-outline hidden sm:block" type="button">
+                Test trình độ
+            </button>
+            <button id="book-appointment" class="btn-primary" type="button">
+                <i class="fas fa-video mr-2"></i>Vào lớp học
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
+        <div class="flex flex-col md:flex-row md:items-center gap-12">
+
+            <!-- Left -->
+            <div class="md:w-1/2">
+                <div class="hero-eyebrow">
+                    <span>★</span> Trung tâm IELTS <span>#1 Việt Nam</span>
+                </div>
+                <h1 class="hero-title">
+                    Chinh phục<br/><em>IELTS 7.0+</em><br/>trong 3 tháng
+                </h1>
+                <p class="hero-subtitle">
+                    Phương pháp học cá nhân hoá, giáo viên bản ngữ và công nghệ AI giúp bạn đạt điểm mục tiêu nhanh nhất có thể.
+                </p>
+                <div class="hero-badges">
+                    <div class="badge"><i class="fas fa-check-circle"></i> Cam kết đầu ra 7.0+</div>
+                    <div class="badge"><i class="fas fa-clock"></i> Học mọi lúc, mọi nơi</div>
+                    <div class="badge"><i class="fas fa-shield-alt"></i> Hoàn tiền 100% nếu trượt</div>
+                </div>
+                <div class="flex flex-wrap gap-3 mt-8">
+                    <button id="book-appointment-2" class="btn-primary" type="button">
+                        <i class="fas fa-play mr-2"></i>Vào lớp học miễn phí
+                    </button>
+                    <button id="test-ielts-2" class="btn-outline" type="button">
+                        <i class="fas fa-pencil-alt mr-2"></i>Kiểm tra ngay
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right – photo grid -->
+            <div class="md:w-1/2">
+                <div class="photo-grid" style="max-height: 420px;">
+                    <img alt="Học viên IELTS" class="tall" src="skibidi_toilet1.jpg" style="min-height:200px; background:#ddd"/>
+                    <img alt="Lớp học online" src="skibidi_toilet2.jpg" style="min-height:95px; background:#e5e5e5"/>
+                    <div class="relative" style="border-radius:10px; overflow:hidden; min-height:95px;">
+                        <img alt="Học viên nhận bằng" src="https://storage.googleapis.com/a1aa/image/fc5e0935-701d-46fb-f741-469b2811eae1.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:10px;"/>
+                        <div style="position:absolute; bottom:8px; left:8px; background:var(--gold); color:var(--navy); font-size:10px; font-weight:700; padding:3px 8px; border-radius:4px; letter-spacing:0.04em;">IELTS 8.5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 grid grid-cols-3 divide-x divide-white/10">
+        <div class="stat-item px-6 sm:px-10 text-center">
+            <div class="stat-number">212K+</div>
+            <div class="stat-label">Học viên đạt IELTS 7.0+</div>
+        </div>
+        <div class="stat-item px-6 sm:px-10 text-center">
+            <div class="stat-number">104K+</div>
+            <div class="stat-label">Đánh giá 5 sao</div>
+        </div>
+        <div class="stat-item px-6 sm:px-10 text-center">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Học viên hài lòng</div>
+        </div>
+    </div>
+</div>
+
+<!-- FEATURES -->
+<section style="background:#fff; padding: 64px 0;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+            <div class="section-eyebrow">Tại sao chọn chúng tôi</div>
+            <h2 class="section-title">Hệ thống đào tạo<br/>đẳng cấp quốc tế</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; margin-bottom:8px;">Lộ trình AI cá nhân hoá</h3>
+                <p style="font-size:13px; color:var(--slate); line-height:1.7;">Hệ thống AI phân tích điểm yếu và tạo lộ trình học tập riêng cho từng học viên.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; margin-bottom:8px;">Giáo viên bản ngữ</h3>
+                <p style="font-size:13px; color:var(--slate); line-height:1.7;">100% giáo viên có chứng chỉ CELTA/DELTA, điểm IELTS 8.5+ và kinh nghiệm thực tiễn.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-video"></i></div>
+                <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; margin-bottom:8px;">Lớp học trực tuyến</h3>
+                <p style="font-size:13px; color:var(--slate); line-height:1.7;">Công nghệ lớp học ảo hiện đại, tương tác thời gian thực như học trực tiếp.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; margin-bottom:8px;">Mock Test chuẩn Cambridge</h3>
+                <p style="font-size:13px; color:var(--slate); line-height:1.7;">Đề thi thử sát đề thật nhất, có chấm chữa Writing và Speaking chi tiết.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+                <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; margin-bottom:8px;">Kho tài liệu 10.000+ đề</h3>
+                <p style="font-size:13px; color:var(--slate); line-height:1.7;">Thư viện đề thi, vocabulary, grammar được cập nhật liên tục theo xu hướng đề mới nhất.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-award"></i></div>
+                <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; margin-bottom:8px;">Cam kết đầu ra</h3>
+                <p style="font-size:13px; color:var(--slate); line-height:1.7;">Hoàn tiền 100% hoặc học lại miễn phí nếu không đạt điểm mục tiêu cam kết.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--cream); padding: 64px 0;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+            <div class="section-eyebrow">Học viên nói gì</div>
+            <h2 class="section-title">Hàng nghìn người tin tưởng</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="testimonial-card">
+                <div class="stars mb-3">★★★★★</div>
+                <p style="font-size:13px; line-height:1.8; color:rgba(255,255,255,0.85); margin-bottom:16px;">"Sau 3 tháng học tại đây mình đã đạt IELTS 7.5. Giáo viên rất nhiệt tình và phương pháp dạy rất khoa học."</p>
+                <div class="flex items-center gap-3">
+                    <img src="https://randomuser.me/api/portraits/women/21.jpg" style="width:36px;height:36px;border-radius:50%;border:2px solid var(--gold)" alt=""/>
+                    <div>
+                        <div style="font-size:13px;font-weight:600;color:#fff;">Nguyễn Thị Lan</div>
+                        <div style="font-size:11px;color:var(--gold);">IELTS 7.5 – Du học Úc</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars mb-3">★★★★★</div>
+                <p style="font-size:13px; line-height:1.8; color:rgba(255,255,255,0.85); margin-bottom:16px;">"Tôi đã thử nhiều trung tâm nhưng chỉ ở đây tôi mới thực sự cải thiện được band Writing lên 7.0."</p>
+                <div class="flex items-center gap-3">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" style="width:36px;height:36px;border-radius:50%;border:2px solid var(--gold)" alt=""/>
+                    <div>
+                        <div style="font-size:13px;font-weight:600;color:#fff;">Trần Minh Khoa</div>
+                        <div style="font-size:11px;color:var(--gold);">IELTS 7.0 – Học bổng toàn phần</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars mb-3">★★★★★</div>
+                <p style="font-size:13px; line-height:1.8; color:rgba(255,255,255,0.85); margin-bottom:16px;">"Lớp học online tiện lợi, giáo viên chữa bài rất kỹ. Điểm Speaking của mình tăng từ 5.5 lên 7.0 chỉ sau 6 tuần."</p>
+                <div class="flex items-center gap-3">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" style="width:36px;height:36px;border-radius:50%;border:2px solid var(--gold)" alt=""/>
+                    <div>
+                        <div style="font-size:13px;font-weight:600;color:#fff;">Phạm Hồng Nhung</div>
+                        <div style="font-size:11px;color:var(--gold);">IELTS 7.0 – Visa định cư Canada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band py-14">
+    <div class="max-w-3xl mx-auto px-4 text-center relative z-10">
+        <div class="section-eyebrow" style="color:var(--gold);">Bắt đầu ngay hôm nay</div>
+        <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#fff; letter-spacing:-0.02em; margin-bottom:16px;">Tham gia buổi học<br/>demo hoàn toàn <em style="font-style:normal;color:var(--gold);">miễn phí</em></h2>
+        <p style="font-size:14px; color:rgba(255,255,255,0.65); margin-bottom:28px;">Trải nghiệm lớp học thực tế, gặp gỡ giáo viên và nhận lộ trình học cá nhân hoá – không cam kết, không phí.</p>
+        <button id="book-appointment-3" class="btn-primary" type="button" style="font-size:14px; padding:14px 36px;">
+            <i class="fas fa-calendar-check mr-2"></i>Đặt lịch học thử ngay
+        </button>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div style="color:rgba(255,255,255,0.3); font-size:11px;">© 2025 IELTS Master Academy. All rights reserved.</div>
+        <div class="flex gap-4">
+            <a href="#" style="color:rgba(255,255,255,0.3); font-size:12px; text-decoration:none;">Chính sách bảo mật</a>
+            <a href="#" style="color:rgba(255,255,255,0.3); font-size:12px; text-decoration:none;">Điều khoản dịch vụ</a>
+            <a href="#" style="color:rgba(255,255,255,0.3); font-size:12px; text-decoration:none;">Liên hệ</a>
+        </div>
+    </div>
+</footer>
+
+<!-- CLASSROOM MODAL -->
+<div id="classroom-modal" class="hidden fixed inset-0 z-50 flex flex-col" style="background:#0d1117;">
+    <div class="flex-1 flex flex-col relative">
+        <button id="close-classroom" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <!-- Participants bar -->
+        <div class="classroom-header">
+            <div class="participant-chip" style="border-color:rgba(201,168,76,0.5);">
+                <span style="color:var(--gold); font-size:16px;">✋</span>
+                <span style="color:var(--gold); font-weight:700;">Tokuda</span>
+                <span style="background:var(--gold); color:#000; font-size:9px; padding:1px 5px; border-radius:3px; font-weight:700;">GV</span>
+            </div>
+            <div class="participant-chip">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt=""/>
+                <span>Albert XeTăng</span>
+            </div>
+            <div class="participant-chip">
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt=""/>
+                <span>Bá Vũ</span>
+            </div>
+            <div class="participant-chip">
+                <img src="https://randomuser.me/api/portraits/men/3.jpg" alt=""/>
+                <span>Thomat Edition</span>
+            </div>
+            <div class="participant-chip">
+                <img src="https://randomuser.me/api/portraits/women/4.jpg" alt=""/>
+                <span>Elon Mutiled</span>
+            </div>
+            <div class="participant-chip">
+                <img src="https://randomuser.me/api/portraits/women/5.jpg" alt=""/>
+                <span>Jack-J97</span>
+            </div>
+            <div class="participant-chip">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" alt=""/>
+                <span>Trùm IELTS</span>
+            </div>
+            <div class="participant-chip">
+                <img src="https://randomuser.me/api/portraits/women/7.jpg" alt=""/>
+                <span>Micho Jackson</span>
+            </div>
+            <div class="participant-chip">
+                <img src="https://randomuser.me/api/portraits/men/8.jpg" alt=""/>
+                <span>Oppen HeiSmer</span>
+            </div>
+        </div>
+
+        <!-- Video -->
+        <div class="flex-1 bg-black flex items-center justify-center relative" style="max-height:calc(100vh - 180px); overflow:hidden;">
+            <video id="classroom-video" class="w-full h-full object-contain" src="skibidi_toilet.mp4" autoplay loop muted></video>
+            <div class="absolute top-3 left-3 flex items-center gap-2" style="background:rgba(0,0,0,0.5); backdrop-filter:blur(8px); padding:4px 10px; border-radius:6px;">
+                <i class="fas fa-shield-alt text-green-400 text-xs"></i>
+                <span style="color:#fff; font-size:11px; font-weight:600;">Chủ Tịch</span>
+                <span style="width:6px;height:6px;background:#22c55e;border-radius:50%;display:inline-block;"></span>
+            </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div style="background:#0d1117; border-top:1px solid rgba(255,255,255,0.08); padding:8px 16px; display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; gap:4px;">
+                <button id="toggle-mic" class="toolbar-btn">
+                    <i class="fas fa-microphone-slash"></i>
+                    <span>Tắt âm</span>
+                </button>
+                <button id="toggle-camera" class="toolbar-btn">
+                    <i class="fas fa-video-slash"></i>
+                    <span>Tắt camera</span>
+                </button>
+            </div>
+            <div style="display:flex; gap:4px;">
+                <div style="display:flex; flex-direction:column; align-items:center; gap:2px; color:rgba(255,255,255,0.6); font-size:10px; padding:6px 10px;">
+                    <i class="fas fa-user-friends" style="font-size:16px;"></i>
+                    <span style="font-weight:600; color:#fff;">5,432</span>
+                    <span>Thành viên</span>
+                </div>
+                <button id="toggle-chat" class="toolbar-btn">
+                    <i class="fas fa-comment-alt"></i>
+                    <span>Chat</span>
+                </button>
+                <button class="toolbar-btn">
+                    <i class="fas fa-desktop" style="color:#22c55e;"></i>
+                    <span>Màn hình</span>
+                </button>
+                <button class="toolbar-btn">
+                    <i class="fas fa-circle"></i>
+                    <span>Ghi hình</span>
+                </button>
+                <button class="toolbar-btn">
+                    <i class="fas fa-smile"></i>
+                    <span>Phản ứng</span>
+                </button>
+            </div>
+            <button id="leave-class" class="leave-btn">
+                <i class="fas fa-phone-slash mr-1"></i>Rời phòng
+            </button>
+        </div>
+
+        <!-- Chat Panel -->
+        <div id="chat-panel" class="hidden fixed sm:absolute inset-0 sm:right-0 sm:top-0 sm:inset-auto w-full sm:w-72 sm:h-full flex flex-col z-50" style="background:#161b22; border-left:1px solid rgba(255,255,255,0.08);">
+            <div style="padding:12px 16px; border-bottom:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between;">
+                <span style="color:#fff; font-size:13px; font-weight:600;"><i class="fas fa-comment-alt mr-2" style="color:var(--gold);"></i>Chat phòng học</span>
+                <button id="close-chat" style="color:rgba(255,255,255,0.5); background:none; border:none; cursor:pointer; font-size:16px; line-height:1; hover:color:white;">×</button>
+            </div>
+            <div id="chat-messages" class="flex-1 overflow-y-auto scrollbar-thin p-3 text-white" style="max-height:calc(100% - 60px);"></div>
+            <div style="padding:8px; border-top:1px solid rgba(255,255,255,0.08); display:flex; gap:6px;">
+                <input id="chat-input" type="text" style="flex:1; background:rgba(255,255,255,0.07); color:#fff; border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:8px 10px; font-size:12px; outline:none; font-family:inherit;" placeholder="Nhập tin nhắn..."/>
+                <button id="send-chat" style="background:var(--gold); color:var(--navy); border:none; border-radius:6px; padding:0 14px; font-size:12px; font-weight:700; cursor:pointer; white-space:nowrap;">Gửi</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TEST MODAL -->
+<div id="test-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center" style="background:rgba(10,22,40,0.8); backdrop-filter:blur(4px);">
+    <div style="background:#fff; border-radius:16px; width:100%; max-width:640px; max-height:90vh; overflow-y:auto; margin:16px;" class="scrollbar-thin">
+        <div style="position:sticky; top:0; background:#fff; padding:20px 24px 16px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; justify-content:space-between; z-index:10; border-radius:16px 16px 0 0;">
+            <div>
+                <div style="font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:4px;">Đánh giá năng lực</div>
+                <h3 style="font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; color:var(--navy);">Kiểm tra trình độ IELTS</h3>
+            </div>
+            <button id="close-test" style="width:36px;height:36px;border-radius:50%;border:1.5px solid #e2e8f0;background:none;cursor:pointer;font-size:18px;color:#64748b;line-height:1;display:flex;align-items:center;justify-content:center;">×</button>
+        </div>
+
+        <div id="test-content" style="padding:24px;">
+            <form id="test-form">
+                <!-- Q1 -->
+                <div style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #f1f5f9;">
+                    <p style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:10px; line-height:1.6;"><span style="color:var(--gold); margin-right:6px;">Câu 1</span> Cho hàm số \( f(x) = \int_0^x \frac{\sin(t^2)}{t} \, dt \). Giá trị của \( \lim_{x \to 0^+} f(x) \) là:</p>
+                    <label class="test-option"><input type="radio" name="q1" value="1" required/> A. 0</label>
+                    <label class="test-option"><input type="radio" name="q1" value="0"/> B. 1</label>
+                    <label class="test-option"><input type="radio" name="q1" value="0"/> C. Không tồn tại</label>
+                    <label class="test-option"><input type="radio" name="q1" value="0"/> D. Vô cùng nhỏ</label>
+                </div>
+
+                <div style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #f1f5f9;">
+                    <p style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:10px; line-height:1.6;"><span style="color:var(--gold); margin-right:6px;">Câu 2</span> Số các nghiệm thực của phương trình \( \ln(x^2 + 1) = \tan^{-1}(x) \) là:</p>
+                    <label class="test-option"><input type="radio" name="q2" value="0" required/> A. 0</label>
+                    <label class="test-option"><input type="radio" name="q2" value="0"/> B. 1</label>
+                    <label class="test-option"><input type="radio" name="q2" value="1"/> C. 2</label>
+                    <label class="test-option"><input type="radio" name="q2" value="0"/> D. Vô hạn</label>
+                </div>
+
+                <div style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #f1f5f9;">
+                    <p style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:10px; line-height:1.6;"><span style="color:var(--gold); margin-right:6px;">Câu 3</span> Cho dãy số \( a_n \) xác định bởi \( a_1 = 1 \), \( a_{n+1} = \sqrt{2 + a_n} \). Tính \( \lim_{n \to \infty} a_n \):</p>
+                    <label class="test-option"><input type="radio" name="q3" value="1" required/> A. 2</label>
+                    <label class="test-option"><input type="radio" name="q3" value="0"/> B. \( \sqrt{2} \)</label>
+                    <label class="test-option"><input type="radio" name="q3" value="0"/> C. 1</label>
+                    <label class="test-option"><input type="radio" name="q3" value="0"/> D. Không tồn tại</label>
+                </div>
+
+                <div style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #f1f5f9;">
+                    <p style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:10px; line-height:1.6;"><span style="color:var(--gold); margin-right:6px;">Câu 4</span> Một vật thể chuyển động tròn đều với vận tốc góc \( \omega \). Nếu lực hướng tâm tăng gấp đôi thì bán kính quỹ đạo:</p>
+                    <label class="test-option"><input type="radio" name="q4" value="0" required/> A. Tăng gấp đôi</label>
+                    <label class="test-option"><input type="radio" name="q4" value="1"/> B. Giảm còn một nửa</label>
+                    <label class="test-option"><input type="radio" name="q4" value="0"/> C. Giữ nguyên</label>
+                    <label class="test-option"><input type="radio" name="q4" value="0"/> D. Giảm 1/4</label>
+                </div>
+
+                <div style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #f1f5f9;">
+                    <p style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:10px; line-height:1.6;"><span style="color:var(--gold); margin-right:6px;">Câu 5</span> Trong hiệu ứng quang điện, nếu năng lượng photon tăng gấp đôi thì động năng cực đại của electron sẽ:</p>
+                    <label class="test-option"><input type="radio" name="q5" value="0" required/> A. Tăng gấp đôi</label>
+                    <label class="test-option"><input type="radio" name="q5" value="0"/> B. Không thay đổi</label>
+                    <label class="test-option"><input type="radio" name="q5" value="1"/> C. Tăng bằng lượng năng lượng tăng thêm</label>
+                    <label class="test-option"><input type="radio" name="q5" value="0"/> D. Bằng hằng số Planck</label>
+                </div>
+
+                <div style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #f1f5f9;">
+                    <p style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:10px; line-height:1.6;"><span style="color:var(--gold); margin-right:6px;">Câu 6</span> Tia X được tạo ra khi:</p>
+                    <label class="test-option"><input type="radio" name="q6" value="1" required/> A. Electron bắn phá vào hạt nhân kim loại nặng</label>
+                    <label class="test-option"><input type="radio" name="q6" value="0"/> B. Electron chuyển mức trong nguyên tử</label>
+                    <label class="test-option"><input type="radio" name="q6" value="0"/> C. Nguyên tử bị ion hoá</label>
+                    <label class="test-option"><input type="radio" name="q6" value="0"/> D. Proton bắn phá nguyên tử nhẹ</label>
+                </div>
+
+                <div style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #f1f5f9;">
+                    <p style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:10px; line-height:1.6;"><span style="color:var(--gold); margin-right:6px;">Câu 7</span> Trong phản ứng nhiệt phân \( KClO_3 \xrightarrow{MnO_2} \), thể tích khí O₂ từ 12,25 gam \( KClO_3 \) (đktc) là:</p>
+                    <label class="test-option"><input type="radio" name="q7" value="0" required/> A. 2,24 lít</label>
+                    <label class="test-option"><input type="radio" name="q7" value="1"/> B. 4,48 lít</label>
+                    <label class="test-option"><input type="radio" name="q7" value="0"/> C. 3,36 lít</label>
+                    <label class="test-option"><input type="radio" name="q7" value="0"/> D. 5,60 lít</label>
+                </div>
+
+                <div style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #f1f5f9;">
+                    <p style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:10px; line-height:1.6;"><span style="color:var(--gold); margin-right:6px;">Câu 8</span> Hợp chất hữu cơ \( C_4H_8O_2 \), tác dụng được với Na và NaOH là:</p>
+                    <label class="test-option"><input type="radio" name="q8" value="0" required/> A. Este</label>
+                    <label class="test-option"><input type="radio" name="q8" value="1"/> B. Axit cacboxylic</label>
+                    <label class="test-option"><input type="radio" name="q8" value="0"/> C. Ancol</label>
+                    <label class="test-option"><input type="radio" name="q8" value="0"/> D. Phenol</label>
+                </div>
+
+                <div style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #f1f5f9;">
+                    <p style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:10px; line-height:1.6;"><span style="color:var(--gold); margin-right:6px;">Câu 9</span> Chọn chất không tham gia phản ứng tráng bạc:</p>
+                    <label class="test-option"><input type="radio" name="q9" value="0" required/> A. HCHO</label>
+                    <label class="test-option"><input type="radio" name="q9" value="0"/> B. CH₃CHO</label>
+                    <label class="test-option"><input type="radio" name="q9" value="0"/> C. HCOOH</label>
+                    <label class="test-option"><input type="radio" name="q9" value="1"/> D. CH₃COOH</label>
+                </div>
+
+                <div style="margin-bottom:24px;">
+                    <p style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:10px; line-height:1.6;"><span style="color:var(--gold); margin-right:6px;">Câu 10</span> Phản ứng nào sau đây không làm thay đổi số oxi hóa:</p>
+                    <label class="test-option"><input type="radio" name="q10" value="0" required/> A. \( Fe + CuSO_4 \to FeSO_4 + Cu \)</label>
+                    <label class="test-option"><input type="radio" name="q10" value="0"/> B. \( H_2 + Cl_2 \to 2HCl \)</label>
+                    <label class="test-option"><input type="radio" name="q10" value="1"/> C. \( BaCl_2 + H_2SO_4 \to BaSO_4 + 2HCl \)</label>
+                    <label class="test-option"><input type="radio" name="q10" value="0"/> D. \( Zn + HCl \to ZnCl_2 + H_2 \)</label>
+                </div>
+
+                <button type="submit" id="finish-test" class="btn-primary w-full" style="font-size:14px; padding:14px; text-align:center; width:100%;">
+                    <i class="fas fa-check-circle mr-2"></i>Hoàn thành bài kiểm tra
+                </button>
+            </form>
+
+            <div id="test-result" class="hidden" style="text-align:center; padding:32px 16px;">
+                <div style="width:72px;height:72px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+                    <i class="fas fa-trophy" style="color:var(--gold); font-size:28px;"></i>
+                </div>
+                <p id="score" style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--navy); margin-bottom:8px;"></p>
+                <p id="comment" style="font-size:14px; color:var(--slate); line-height:1.7;"></p>
+                <button onclick="document.getElementById('test-modal').classList.add('hidden')" class="btn-primary" style="margin-top:24px;">
+                    Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const classroomModal = document.getElementById('classroom-modal');
+    const closeButton = document.getElementById('close-classroom');
+    const toggleMic = document.getElementById('toggle-mic');
+    const toggleCamera = document.getElementById('toggle-camera');
+    const toggleChat = document.getElementById('toggle-chat');
+    const chatPanel = document.getElementById('chat-panel');
+    const closeChat = document.getElementById('close-chat');
+    const chatInput = document.getElementById('chat-input');
+    const sendChat = document.getElementById('send-chat');
+    const chatMessages = document.getElementById('chat-messages');
+    const leaveClass = document.getElementById('leave-class');
+    const classroomVideo = document.getElementById('classroom-video');
+    const testModal = document.getElementById('test-modal');
+    const closeTest = document.getElementById('close-test');
+    const testForm = document.getElementById('test-form');
+    const testResult = document.getElementById('test-result');
+    const scoreDisplay = document.getElementById('score');
+    const commentDisplay = document.getElementById('comment');
+
+    let isMicOn = false;
+    let isCameraOn = false;
+
+    const openClassroom = () => {
+        classroomModal.classList.remove('hidden');
+        classroomVideo.play();
+    };
+
+    const closeClassroom = () => {
+        classroomModal.classList.add('hidden');
+        classroomVideo.pause();
+    };
+
+    ['book-appointment', 'book-appointment-2', 'book-appointment-3'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('click', openClassroom);
+    });
+
+    closeButton.addEventListener('click', closeClassroom);
+    leaveClass.addEventListener('click', closeClassroom);
+
+    toggleMic.addEventListener('click', () => {
+        isMicOn = !isMicOn;
+        toggleMic.innerHTML = `<i class="fas fa-microphone${isMicOn ? '' : '-slash'}" style="font-size:16px;"></i><span>${isMicOn ? 'Bật âm' : 'Tắt âm'}</span>`;
+    });
+
+    toggleCamera.addEventListener('click', () => {
+        isCameraOn = !isCameraOn;
+        toggleCamera.innerHTML = `<i class="fas fa-video${isCameraOn ? '' : '-slash'}" style="font-size:16px;"></i><span>${isCameraOn ? 'Bật camera' : 'Tắt camera'}</span>`;
+    });
+
+    toggleChat.addEventListener('click', () => chatPanel.classList.toggle('hidden'));
+    closeChat.addEventListener('click', () => chatPanel.classList.add('hidden'));
+
+    const addMessage = (message, isUser) => {
+        const p = document.createElement('p');
+        p.textContent = message;
+        p.className = isUser ? 'user-message' : 'other-message';
+        p.style.margin = '4px 0';
+        chatMessages.appendChild(p);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    };
+
+    sendChat.addEventListener('click', () => {
+        const message = chatInput.value.trim();
+        if (message) {
+            addMessage(message, true);
+            chatInput.value = '';
+            setTimeout(() => addMessage('Cảm ơn bạn! Giáo viên sẽ trả lời ngay.', false), 1000);
+        }
+    });
+
+    chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') sendChat.click(); });
+
+    const openTest = () => {
+        testModal.classList.remove('hidden');
+        testResult.classList.add('hidden');
+        testForm.classList.remove('hidden');
+        testForm.reset();
+        if (typeof MathJax !== 'undefined') MathJax.Hub.Queue(["Typeset", MathJax.Hub, testForm]);
+    };
+
+    ['test-ielts', 'test-ielts-2'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('click', openTest);
+    });
+
+    closeTest.addEventListener('click', () => testModal.classList.add('hidden'));
+
+    testForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let score = 0;
+        ['q1','q2','q3','q4','q5','q6','q7','q8','q9','q10'].forEach(q => {
+            const sel = document.querySelector(`input[name="${q}"]:checked`);
+            if (sel) score += parseInt(sel.value);
+        });
+
+        let comment = '';
+        if (score === 10) comment = '🎉 Xuất sắc! Bạn có tiềm năng đạt IELTS 8.0+. Hãy đăng ký khoá nâng cao ngay!';
+        else if (score >= 7) comment = '👍 Rất tốt! Chỉ cần thêm một chút luyện tập là bạn sẽ đạt mục tiêu 7.0+.';
+        else if (score >= 5) comment = '📚 Cố gắng hơn nhé! Khoá học của chúng tôi sẽ giúp bạn cải thiện nhanh chóng.';
+        else comment = '🚀 Đừng nản lòng! Mọi người đều bắt đầu từ đây. Hãy để chúng tôi đồng hành cùng bạn.';
+
+        scoreDisplay.textContent = `${score}/10 điểm`;
+        commentDisplay.textContent = comment;
+        testForm.classList.add('hidden');
+        testResult.classList.remove('hidden');
+    });
+
+    classroomModal.addEventListener('click', (e) => { if (e.target === classroomModal) closeClassroom(); });
+    testModal.addEventListener('click', (e) => { if (e.target === testModal) testModal.classList.add('hidden'); });
+});
+</script>
+</body>
+</html>
