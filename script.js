@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
             addMessage(message, true);
             chatInput.value = '';
             setTimeout(() => {
-                addMessage('Shut up!', false);
+                addMessage('Cút!', false);
             }, 1000);
         }
     });
@@ -113,11 +113,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (score === 10) {
             comment = 'Quá đẹp trai và thông minh';
         } else if (score === 8) {
-            comment = '<strong>You are stupid</strong>';
+            comment = '<strong>Ngu Chó</strong>';
         } else if (score < 5) {
             comment = '<strong>DogShit</strong>';
         } else {
-            comment = 'Cố gắng hơn nhé!';
+            comment = 'Ngu Chết Mẹ!';
         }
 
         scoreDisplay.textContent = `Điểm: ${score}/10`;
